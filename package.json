@@ -1,0 +1,17 @@
+{
+  "name": "Cards_Against_Humanity",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Adriano Moura",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.4",
+    "lodash": "^4.6.1",
+    "randomstring": "^1.1.4",
+    "socket.io": "^1.4.5"
+  }
+}

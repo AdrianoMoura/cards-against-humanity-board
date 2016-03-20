@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+<head>
+    <title>Cards Against Humanity</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="apple-mobile-web-app-title" content="Cards Against Humanity"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="apple-touch-icon" href="/img/icon.png" />
+    <link rel="stylesheet" href="/css/animate.css">
+    <link rel="stylesheet" href="/css/framework7.material.min.css">
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+    <div class="panel panel-left panel-cover">
+        <div class="view panel-view">  </div>
+    </div>
+    <!-- Views -->
+    <div class="views">
+        <!-- Your main view -->
+        <div class="view view-main">
+            <div class="pages">
+                <div class="page" data-page="home">
+                    <div class="page-content">
+                        <div class="content-block">
+                        <div class="center-block">
+                            <img src="/img/logo.png" id="logo">
+
+                            <a href="#" class="button btn btn-white init-game"> Iniciar jogo</a>
+                            <a href="#" class="button btn btn-black enter-game"> Entrar em um jogo</a>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/template7" id="playerTemplate">
+        <li id="p{{playerId}}">
+            <div class="item-content">
+                <div class="item-media">
+                    <div class="bullet-user" style="background-color:{{color}}"></div>
+                </div>
+                <div class="item-inner">
+                    <div class="item-title-row">
+                        <div class="item-title">{{name}}</div>
+                        <div class="item-after">aguardando</div>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </script>
+    <script type="text/template7" id="cardSlideTemplate">
+        {{#each cards}}
+            <div class="swiper-slide">
+                <div class="whiteCard animated bounceInUp">
+                    <div class="inner">
+                        {{this}}
+                    </div>
+                </div>
+            </div>
+        {{/each}}
+    </script>
+    <script type="text/template7" id="blackCardTemplate">
+        <div class="animated bounceInLeft">
+            <div class="flip-container tap-target draggable">
+                <div class="rotate-area">
+                    <div class="flipper">
+                        <div class="front">
+                            <div class="blackCard">
+                                <div class="inner">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="back">
+                            <div class="blackCard">
+                                <div class="inner">
+                                    {{card}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+    <script type="text/template7" id="whiteCardTemplate">
+        <div class="animated {{anim}}" style="z-index: 9999999;position: relative; top: {{y}}px; left: {{x}}px">
+            <div class="flip-container tap-target draggable">
+                <div class="rotate-area">
+                    <div class="flipper">
+                        <div class="front">
+                            <div class="whiteCard">
+                                <div class="inner">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="back">
+                            <div class="whiteCard">
+                                <div class="inner">
+                                    {{text}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h5>{{player}}</h5>
+            </div>
+        </div>
+    </script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/framework7.min.js"></script>
+    <script src="/js/jquery-2.2.2.min.js"></script>
+    <script src="/js/interact.min.js"></script>
+    <script src="/js/jquery.touch_box.min.js"></script>
+    <script src="/js/main.js"></script>
+</body>
+</html>

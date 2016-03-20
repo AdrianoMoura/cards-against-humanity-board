@@ -1,0 +1,333 @@
+*
+{
+    font-family: "Open Sans" !important;
+    box-sizing: border-box;
+}
+
+.center-block
+{
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+#logo
+{
+    width: 100%;
+    max-width: 400px;
+}
+
+.page[data-page='home']
+{
+    background-color: #000;
+}
+
+.btn
+{
+    display: block;
+    max-width: 300px;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 22px;
+    padding: 20px;
+    height: auto;
+    text-align: left;
+    text-transform: inherit;
+    margin-bottom: 20px;
+}
+
+.btn.btn-white
+{
+    background-color: #FFF;
+    color: #000
+}
+
+.btn.btn-black
+{
+    background-color: #000;
+    color: #FFF;
+    border: solid 2px #FFF;
+}
+
+.init-modal {
+    /* position: absolute; */
+    max-width: 500px;
+    width: 90%;
+    color: #000;
+    margin-top: 100px;
+    /* left: calc(50% - 250px); */
+    margin: auto;
+    margin-top: 100px;
+    z-index: 99999;
+    position: relative;
+}
+
+.init-modal .content-modal {
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .2);
+    padding: 20px;
+    text-align: center;
+}
+
+h1, h2, h3, h4, h5
+{
+    margin: 0 0 5px 0 ;
+}
+
+h1
+{
+    font-weight: lighter;
+}
+
+h5
+{
+    color: #8b8b8b;
+}
+
+.bullet-user
+{
+    width: 15px;
+    height: 15px;
+    border-radius: 30px;
+    margin: 5px;
+}
+
+input
+{
+    -webkit-appearance: inherit;
+    appearance: inherit;
+    border: none;
+    font-size: 18px;
+    text-align: center;
+}
+
+.blackCard {
+    background-color: black;
+    color: white;
+    width: 189px;
+    height: 280px;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 15px;
+    border-color: black;
+    box-shadow: 0px 8px 20px rgba(0,0,0,.4);
+    position: absolute;
+}
+
+.front .blackCard
+{
+    background-image: url(/img/backcardblack.jpg);
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: 147px;
+}
+
+.back .blackCard
+{
+    background-image: url(/img/card_logoblack.png);
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    background-size: 147px;
+}
+
+.whiteCard {
+    background-color: white;
+    color: black;
+    width: 189px;
+    height: 280px;
+    font-weight: bold;
+    border-radius: 7px;
+    border-style: solid;
+    border-width: 1px;
+    font-size: 16px;
+    border-color: white;
+    top: calc(50% - 140px);
+    left: calc(50% - 95px);
+    position: absolute;
+    box-shadow: 0px 8px 20px rgba(0,0,0,.4);
+}
+
+.rotate-area
+{
+    width: 189px;
+    height: 280px;
+    position: absolute;
+}
+
+.swiper-slide .whiteCard {
+    background-image: url(/img/card_logowhite.png);
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    width: 270px;
+    height: 400px;
+    font-size: 23px;
+    border-radius: 10px;
+    top: calc(50% - 200px);
+    left: calc(50% - 135px);
+}
+
+.front .whiteCard
+{
+    background-image: url(/img/backcardwhite.jpg);
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: 147px;
+}
+
+.back .whiteCard
+{
+    background-image: url(/img/card_logowhite.png);
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    background-size: 147px;
+}
+
+.inner {
+    padding: 25px 25px;
+}
+
+.swiper-container
+{
+    height: 100%;
+}
+
+.black-deck
+{
+    width: 189px;
+    height: 280px;
+    top: calc(50% - 225px);
+    left: calc(50% - 135px);
+    position: absolute;
+    z-index: 1;
+}
+
+/* simple */
+.flip-container {
+    -webkit-perspective: 1000;
+    -moz-perspective: 1000;
+    -ms-perspective: 1000;
+    perspective: 1000;
+
+    -ms-transform: perspective(1000px);
+    -moz-transform: perspective(1000px);
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    position: absolute;
+}
+
+.flip-container h5
+{
+    margin-top: 290px;
+    text-align: right;
+}
+
+/*
+.flip-container:hover .flipper, .flip-container.hover .flipper, #flip-toggle.flip .flipper {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+}
+*/
+
+
+/* START: Accommodating for IE */
+.flip-container.hover .back {
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+}
+
+.flip-container.hover .front {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+/* END: Accommodating for IE */
+
+.flip-container, .front, .back {
+    width: 189px;
+    height: 280px;
+}
+
+.flipper {
+    -webkit-transition: 0.6s;
+    -webkit-transform-style: preserve-3d;
+    -ms-transition: 0.6s;
+
+    -moz-transition: 0.6s;
+    -moz-transform: perspective(1000px);
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+
+    transition: 0.6s;
+    transform-style: preserve-3d;
+
+    position: relative;
+}
+
+.front, .back {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+
+    -webkit-transition: 0.6s;
+    -webkit-transform-style: preserve-3d;
+    -webkit-transform: rotateY(0deg);
+
+    -moz-transition: 0.6s;
+    -moz-transform-style: preserve-3d;
+    -moz-transform: rotateY(0deg);
+
+    -o-transition: 0.6s;
+    -o-transform-style: preserve-3d;
+    -o-transform: rotateY(0deg);
+
+    -ms-transition: 0.6s;
+    -ms-transform-style: preserve-3d;
+    -ms-transform: rotateY(0deg);
+
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    transform: rotateY(0deg);
+
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.front {
+    -webkit-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    z-index: 2;
+}
+
+.back {
+    -webkit-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    -o-transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+}
+
+.clear
+{
+    color: #8d8d8d;
+    text-decoration: none;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
+
+.page-content
+{
+    overflow: hidden;
+}
